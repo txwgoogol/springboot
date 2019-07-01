@@ -10,8 +10,9 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository //表示 UserRepositoryImpl 是一个可以注入的bean
-public class UserRepositoryImpl implements UserRepository {
+public class UserRepositoryImpl /*implements UserRepository */ {
 
+    /*
     //生成递增ID用作用户唯一编号
     private static AtomicLong counterId = new AtomicLong();
     //模拟数据存储
@@ -42,5 +43,6 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> userList() {
         return new ArrayList<>(this.userConcurrentMap.values());
     }
+    */
 
 }
