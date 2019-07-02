@@ -57,10 +57,10 @@ public class UserController {
     }
 
     //修改用户界面
-    @GetMapping(value = "edit/{id}")
+    @GetMapping(value = "/edit/{id}")
     public ModelAndView editForm(@PathVariable("id") Long id, Model model) {
         Optional<User> user = userRepository.findById(id);
-        model.addAttribute("user", user);
+        model.addAttribute("user", user.get());
         model.addAttribute("title", "编辑用户");
         return new ModelAndView("user/form", "userModel", model);
     }

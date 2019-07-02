@@ -17,6 +17,7 @@
             <td>id</td>
             <td>名字</td>
             <td>年龄</td>
+            <td>Email</td>
             <td>管理</td>
         </tr>
         </thead>
@@ -28,6 +29,7 @@
             <td th:text="${user.id}"></td>
             <td><a th:href="@{'/user/'+${user.id}}" th:text="${user.name}"></a></td>
             <td th:text="${user.age}"></td>
+            <td th:text="${user.email}"></td>
             <td><a th:href="@{'/user/delete/'+${user.id}}">删除</a></td>
         </tr>
         </tbody>

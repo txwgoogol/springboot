@@ -1,10 +1,9 @@
 package com.example.demo.domain;
 
-import org.springframework.data.annotation.Id;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * 用户实体类
@@ -25,10 +24,11 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String name, Integer age) {
+    public User(Long id, String name, Integer age, String email) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.email = email;
     }
 
     public Long getId() {
@@ -69,6 +69,7 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", email='" + email + '\'' +
                 '}';
     }
 
