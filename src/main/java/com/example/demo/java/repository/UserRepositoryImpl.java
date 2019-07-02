@@ -1,13 +1,6 @@
-package com.example.demo.repository;
+package com.example.demo.java.repository;
 
-import com.example.demo.domain.User;
 import org.springframework.stereotype.Repository;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Repository //表示 UserRepositoryImpl 是一个可以注入的bean
 public class UserRepositoryImpl /*implements UserRepository */ {

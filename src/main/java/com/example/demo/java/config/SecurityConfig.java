@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.example.demo.java.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

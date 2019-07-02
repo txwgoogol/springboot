@@ -1,9 +1,7 @@
-package com.example.demo.repository;
+package com.example.demo.java.repository;
 
-import com.example.demo.domain.User;
+import com.example.demo.java.domain.User;
 import org.springframework.data.repository.CrudRepository;
-
-import java.util.List;
 
 /**
  * 修改用户资源库的接口，继承CrudRepository 。
