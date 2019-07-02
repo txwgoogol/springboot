@@ -3,6 +3,9 @@ package com.example.demo.java.controller;
 
 import com.example.demo.java.domain.User;
 import com.example.demo.java.repository.UserRepository;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +15,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
+@Api(value = "用户管理",tags = "用户管理")
 public class UserController {
 
     @Autowired
     private UserRepository userRepository;
 
-    //查看所有用户
+    @ApiOperation(value = "查看所有用户", notes = "查看所有用户")
     @GetMapping("/userlist")
     public ModelAndView userList(Model model) {
         model.addAttribute("userList", userRepository.findAll());
@@ -25,7 +29,8 @@ public class UserController {
         return new ModelAndView("user/list", "userModel", model);
     }
 
-    //根据id 查询用户
+    @ApiOperation(value = "根据id 查询用户", notes = "根据id 查询用户")
+    @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long", paramType = "path")
     @GetMapping("{id}")
     public ModelAndView view(@PathVariable("id") Long id, Model model) {
         Optional<User> user = userRepository.findById(id);
@@ -34,7 +39,7 @@ public class UserController {
         return new ModelAndView("user/view", "userModel", model);
     }
 
-    //获取创建表单页面
+    @ApiOperation(value = "获取创建表单页面", notes = "获取创建表单页面")
     @GetMapping("/form")
     public ModelAndView createForm(Model model) {
         model.addAttribute("user", new User());
@@ -42,21 +47,21 @@ public class UserController {
         return new ModelAndView("user/form", "userModel", model);
     }
 
-    //保存用户
+    @ApiOperation(value = "保存用户", notes = "保存用户")
     @PostMapping
     public ModelAndView saveOrUpdateUser(User user) {
         user = userRepository.save(user);
         return new ModelAndView("redirect:/user/userlist");
     }
 
-    //根据id删除用户
+    @ApiOperation(value = "根据id删除用户", notes = "根据id删除用户")
     @GetMapping(value = "/delete/{id}")
     public ModelAndView delete(@PathVariable("id") Long id) {
         userRepository.deleteById(id);
         return new ModelAndView("redirect:/user/userlist");
     }
 
-    //修改用户界面
+    @ApiOperation(value = "修改用户界面", notes = "修改用户界面")
     @GetMapping(value = "/edit/{id}")
     public ModelAndView editForm(@PathVariable("id") Long id, Model model) {
         Optional<User> user = userRepository.findById(id);

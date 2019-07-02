@@ -5,6 +5,11 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 
+/**
+ * 安全认证权限管理
+ *
+ * @author HANS TAM
+ */
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfiguration {
 
