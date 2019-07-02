@@ -24,7 +24,7 @@
         </thead>
         <tbody>
         <tr th:if="${userModel.userList.size()} eq 0">
-            <td colspan="3">无数据！</td>
+            <td style="width: fit-content">无数据!!!</td>
         </tr>
         <tr th:each="user:${userModel.userList}">
             <td th:text="${user.id}"></td>
