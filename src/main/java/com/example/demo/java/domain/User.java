@@ -24,4 +24,13 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    public User() {
+    }
+
+    public User(String name, Integer age, String email) {
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+
 }

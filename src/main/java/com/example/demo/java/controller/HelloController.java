@@ -1,6 +1,10 @@
 package com.example.demo.java.controller;
 
 
+import com.alibaba.fastjson.JSON;
+import com.example.demo.java.domain.User;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,11 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @author colin
  */
 @RestController
+@Api(value = "Hello World", tags = "Hello World")
 public class HelloController {
 
     @RequestMapping("/helloWorld")
+    @ApiOperation(value = "Hello World", tags = "Hello World")
     private String helloWorld() {
-        return "Hello World";
+
+        return JSON.toJSONString(new User("COLIN TAM",22,"1679916999@qq.com"));
     }
 
 }
