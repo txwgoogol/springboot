@@ -11,6 +11,7 @@ import javax.persistence.*;
  */
 @Data
 @Entity
+@Table(name = "SPRING_USER")
 public class User {
 
     @Id

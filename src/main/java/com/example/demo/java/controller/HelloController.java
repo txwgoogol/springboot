@@ -20,8 +20,7 @@ public class HelloController {
     @RequestMapping("/helloWorld")
     @ApiOperation(value = "Hello World", tags = "Hello World")
     private String helloWorld() {
-
-        return JSON.toJSONString(new User("COLIN TAM",22,"1679916999@qq.com"));
+        return JSON.toJSONString(new User("COLIN TAM", 22, "1679916999@qq.com"));
     }
 
 }
