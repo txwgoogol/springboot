@@ -29,7 +29,7 @@ public class UserController {
     @GetMapping("{id}")
     public ModelAndView view(@PathVariable("id") Long id, Model model) {
         Optional<User> user = userRepository.findById(id);
-        model.addAttribute("user", user.get());
+        model.addAttribute("user", user.orElse(null));
         model.addAttribute("title", "查看用户");
         return new ModelAndView("user/view", "userModel", model);
     }
@@ -60,7 +60,7 @@ public class UserController {
     @GetMapping(value = "/edit/{id}")
     public ModelAndView editForm(@PathVariable("id") Long id, Model model) {
         Optional<User> user = userRepository.findById(id);
-        model.addAttribute("user", user.get());
+        model.addAttribute("user", user.orElse(null));
         model.addAttribute("title", "编辑用户");
         return new ModelAndView("user/form", "userModel", model);
     }
