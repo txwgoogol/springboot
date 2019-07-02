@@ -7,20 +7,25 @@
 </head>
 <body style="text-align: center">
 <div th:replace="~{common/header::header}"></div>
+<br>
 <h4 th:text="${userModel.title}">DEMO</h4>
 
 <form action="/user" th:action="@{/user}" method="post" th:object="${userModel.user}">
     <input type="hidden" name="id" th:value="*{id}">
-    <br/>
-    名字<input type="text" name="name" th:value="*{name}">
-    <br/>
-    年龄<input type="number" name="age" th:value="*{age}">
-    <br/>
-    Email<input type="text" name="email" th:value="*{email}">
-    <br/>
+    <br>
+    <br>
+    名字 &nbsp;&nbsp; <input type="text" name="name" th:value="*{name}">
+    <br>
+    <br>
+    年龄 &nbsp;&nbsp; <input type="number" name="age" th:value="*{age}">
+    <br>
+    <br>
+    Email &nbsp;&nbsp; <input type="text" name="email" th:value="*{email}">
+    <br>
+    <br>
     <input type="submit" value="提交">
 </form>
-
+<br>
 <div th:replace="~{common/footer::footer}"></div>
 </body>
 </html>
