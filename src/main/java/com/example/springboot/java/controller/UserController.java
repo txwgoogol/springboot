@@ -1,8 +1,8 @@
-package com.example.demo.java.controller;
+package com.example.springboot.java.controller;
 
 
-import com.example.demo.java.domain.User;
-import com.example.demo.java.repository.UserRepository;
+import com.example.springboot.java.entity.User;
+import com.example.springboot.java.repository.UserRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

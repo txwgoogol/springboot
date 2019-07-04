@@ -1,8 +1,8 @@
-package com.example.demo.java.controller;
+package com.example.springboot.java.controller;
 
 
 import com.alibaba.fastjson.JSON;
-import com.example.demo.java.domain.User;
+import com.example.springboot.java.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;

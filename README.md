@@ -2,7 +2,7 @@
 #### 项目结构  
 ###### 代码层的结构  
 
-根目录：com.example.demo  
+根目录：com.example.springboot  
 1. 工程启动类(ApplicationServer.java)置于com.example.demo.java.build包下  
 2. 实体类(domain)置于com.example.demo.java.domain  
 3. 数据访问层(Dao)置于com.example.demo.java.repository  

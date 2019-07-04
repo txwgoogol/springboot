@@ -1,6 +1,6 @@
-package com.example.demo.java.repository;
+package com.example.springboot.java.repository;
 
-import com.example.demo.java.domain.User;
+import com.example.springboot.java.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 /**

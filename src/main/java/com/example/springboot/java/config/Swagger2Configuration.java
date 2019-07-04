@@ -1,4 +1,4 @@
-package com.example.demo.java.config;
+package com.example.springboot.java.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +22,7 @@ public class Swagger2Configuration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.demo.java.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.springboot.java.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
