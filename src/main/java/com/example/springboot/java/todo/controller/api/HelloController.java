@@ -1,10 +1,11 @@
-package com.example.springboot.java.controller;
+package com.example.springboot.java.todo.controller.api;
 
 
 import com.alibaba.fastjson.JSON;
-import com.example.springboot.java.entity.User;
+import com.example.springboot.java.todo.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,13 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
  * @author colin
  */
 @RestController
+@RequestMapping(value = "/hello", produces = MediaType.APPLICATION_JSON_VALUE)
 @Api(value = "Hello World", tags = "Hello World")
 public class HelloController {
 
     @RequestMapping("/helloWorld")
     @ApiOperation(value = "Hello World", tags = "Hello World")
     private String helloWorld() {
-        return JSON.toJSONString(new User("COLIN TAM", 22, "1679916999@qq.com"));
+        User user = new User();
+        user.setName("Colin Tam");
+        user.setPassword("");
+        user.setAge(22);
+        user.setGender(1);
+        user.setEmail("1679916999@qq.com");
+        return JSON.toJSONString(user);
     }
 
 }

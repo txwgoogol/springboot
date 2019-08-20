@@ -1,13 +1,16 @@
 package com.example.springboot;
 
+import org.junit.Test;
+
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Test {
-	@org.junit.Test
-	public void contextLoads() {
+public class DemoTest {
+	
+	@Test
+	public void sortSet() {
 		Set<String> set = new HashSet<>();
 		set.add("20180101");
 		set.add("20180102");
@@ -25,4 +28,5 @@ public class Test {
 		sortSet.addAll(set);
 		System.out.println("排序后：" + sortSet);
 	}
+	
 }

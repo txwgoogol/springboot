@@ -1,8 +1,8 @@
-package com.example.springboot.java.controller;
+package com.example.springboot.java.todo.controller.web;
 
 
-import com.example.springboot.java.entity.User;
-import com.example.springboot.java.repository.UserRepository;
+import com.example.springboot.java.todo.entity.User;
+import com.example.springboot.java.todo.repository.UserRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

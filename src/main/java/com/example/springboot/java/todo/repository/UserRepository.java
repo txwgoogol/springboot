@@ -1,6 +1,6 @@
-package com.example.springboot.java.repository;
+package com.example.springboot.java.todo.repository;
 
-import com.example.springboot.java.entity.User;
+import com.example.springboot.java.todo.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 /**

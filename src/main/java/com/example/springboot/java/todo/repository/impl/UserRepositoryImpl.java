@@ -1,4 +1,4 @@
-package com.example.springboot.java.repository;
+package com.example.springboot.java.todo.repository.impl;
 
 import org.springframework.stereotype.Repository;
 
